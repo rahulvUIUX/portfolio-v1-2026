@@ -326,8 +326,6 @@ footer{background:var(--card);border-top:1px solid var(--line);padding:56px 0 30
 .hero-copy .cta .btn.p{box-shadow:0 12px 24px -8px #7c3aed80}
 .hero-copy .cta .btn.p span{font-size:18px;transition:transform .2s ease}
 .hero-copy .cta .btn.p:hover span{transform:translate(3px,-2px)}
-.hero-copy .cta .hero-resume{background:#fff;border-color:#fff;box-shadow:0 10px 24px -12px #50367866}
-.hero-copy .cta .hero-resume>span{font-size:19px;font-weight:800}
 .hero-copy>.meta{margin:23px auto 0;color:var(--mut);font-size:12px}
 .stats{position:relative;z-index:2;margin-top:-26px;padding:0 0 16px;border:0;background:transparent}
 .stats .wrap{max-width:1380px;border:1px solid #ffffff;border-radius:26px;background:#ffffffd9;box-shadow:0 18px 34px -20px #5720b944;backdrop-filter:blur(14px)}
@@ -421,7 +419,6 @@ nav .wrap{position:relative;gap:12px}
 :root[data-theme="dark"] .hero-doodle-arrows{color:var(--ink)}
 :root[data-theme="dark"] .hero-headline h1 em{border-color:#7650ad;background:#30234a;box-shadow:0 8px 0 #120e1c;color:#decaff}
 :root[data-theme="dark"] .hero-float-label{color:#211932}
-:root[data-theme="dark"] .hero-copy .cta .hero-resume{background:var(--card);border-color:var(--line);color:var(--ink)}
 :root[data-theme="dark"] .stats .wrap{border-color:var(--line);background:rgba(30,24,48,.9);box-shadow:0 18px 34px -20px #000}
 @media(prefers-color-scheme:dark){
 :root:not([data-theme="light"]) .hero::before{background-image:linear-gradient(#c9a9ff0a 1px,transparent 1px),linear-gradient(90deg,#c9a9ff0a 1px,transparent 1px),radial-gradient(ellipse at 50% 35%,#553c7c75 0,transparent 60%)}
@@ -429,7 +426,6 @@ nav .wrap{position:relative;gap:12px}
 :root:not([data-theme="light"]) .hero-doodle-arrows{color:var(--ink)}
 :root:not([data-theme="light"]) .hero-headline h1 em{border-color:#7650ad;background:#30234a;box-shadow:0 8px 0 #120e1c;color:#decaff}
 :root:not([data-theme="light"]) .hero-float-label{color:#211932}
-:root:not([data-theme="light"]) .hero-copy .cta .hero-resume{background:var(--card);border-color:var(--line);color:var(--ink)}
 :root:not([data-theme="light"]) .stats .wrap{border-color:var(--line);background:rgba(30,24,48,.9);box-shadow:0 18px 34px -20px #000}
 }
 @media(max-width:900px){
