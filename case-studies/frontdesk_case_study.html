@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A product design case study about FrontDesk, an enterprise visitor and workplace operations platform.">
+  <meta name="theme-color" content="#f3ecff">
+  <title>FrontDesk — Product Design Case Study | Rahul V</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="frontdesk_case_study.css">
+  <script src="frontdesk_case_study.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Rahul V — back to portfolio">Rahul V<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="Case study navigation">
+        <a href="#overview">Overview</a>
+        <a href="#challenge">Challenge</a>
+        <a href="#approach">Approach</a>
+        <a href="#solution">Solution</a>
+        <a href="#outcome">Reflection</a>
+      </nav>
+      <a class="header-link" href="../index.html#work">All projects <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Enterprise product design · Internal operations</p>
+          <h1 id="page-title">A better welcome starts <em>before</em> the front desk.</h1>
+          <p class="hero-lead">Designing a connected visitor and workplace operations experience for receptionists, visitors, and management across multiple offices.</p>
+          <div class="hero-tags" aria-label="Project scope">
+            <span>End-to-end product design</span>
+            <span>Web + mobile</span>
+            <span>Multi-location operations</span>
+          </div>
+          <a class="text-link hero-cta" href="#overview">Explore the case study <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="product-preview" aria-label="Illustrative FrontDesk operations dashboard">
+          <div class="preview-sidebar">
+            <div class="preview-logo"><span class="preview-logo-icon">F</span> FRONTDESK</div>
+            <div class="preview-nav-item is-current"><span>▦</span> Overview</div>
+            <div class="preview-nav-item"><span>♙</span> Visitors</div>
+            <div class="preview-nav-item"><span>▤</span> Reports</div>
+            <div class="preview-user"><span>RV</span><div>Reception team<small>Workspace</small></div></div>
+          </div>
+          <div class="preview-main">
+            <div class="preview-heading"><div><small>WORKSPACE</small><strong>Operations overview</strong></div><span class="preview-date">This month⌄</span></div>
+            <div class="metric-grid">
+              <div class="metric-card"><span>Visitor check-ins</span><strong>—</strong><small>Across locations</small></div>
+              <div class="metric-card"><span>Courier entries</span><strong>—</strong><small>Across locations</small></div>
+              <div class="metric-card"><span>QR registrations</span><strong>—</strong><small>Mobile check-in</small></div>
+            </div>
+            <div class="preview-chart">
+              <div class="chart-heading"><div><small>ACTIVITY</small><strong>Visits over time</strong></div><span>Illustrative</span></div>
+              <div class="chart-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="chart-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+            </div>
+            <p class="preview-caption">Conceptual visual · no operational figures shown</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+    </section>
+
+    <section class="project-facts" aria-label="Project details">
+      <div class="container facts-grid">
+        <div><span>My role</span><strong>Product Designer · End-to-end</strong></div>
+        <div><span>Product</span><strong>Internal enterprise platform</strong></div>
+        <div><span>Surfaces</span><strong>Web application + mobile check-in</strong></div>
+        <div><span>Rollout</span><strong>3 offices · Bengaluru &amp; Hyderabad</strong></div>
+      </div>
+    </section>
+
+    <section class="section section-intro" id="overview">
+      <div class="container intro-layout">
+        <div>
+          <p class="eyebrow"><span>01</span> The context</p>
+          <h2>One entry point.<br><span class="text-accent">Many moving parts.</span></h2>
+        </div>
+        <div class="intro-copy">
+          <p class="large-copy">FrontDesk brings visitor registration, workplace entry tracking, courier handling, and management reporting into one structured operational experience.</p>
+          <p>As the end-to-end designer, I worked from requirement gathering and workflow planning through UI design, engineering collaboration, implementation support, and receptionist training.</p>
+        </div>
+      </div>
+      <div class="container audience-grid">
+        <article class="audience-card">
+          <span class="card-index">01</span><span class="audience-icon" aria-hidden="true">↗</span>
+          <h3>Receptionists</h3><p>Register different visit types, find employee information, manage check-ins, and retrieve visit records.</p>
+        </article>
+        <article class="audience-card">
+          <span class="card-index">02</span><span class="audience-icon" aria-hidden="true">◎</span>
+          <h3>Visitors</h3><p>Share essential information through assisted registration or a QR-led mobile flow, then receive an access pass.</p>
+        </article>
+        <article class="audience-card">
+          <span class="card-index">03</span><span class="audience-icon" aria-hidden="true">▥</span>
+          <h3>Management</h3><p>Review visitor activity and operational trends across locations, departments, and reporting periods.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="challenge">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span>02</span> Defining the challenge</p>
+          <h2>Not just the moment<br>someone walks in.</h2>
+          <p class="section-lead">The experience had to work across visitor categories, office teams, connected systems, and management needs—not just collect a visitor’s details.</p>
+        </div>
+        <div class="challenge-grid">
+          <article class="challenge-card"><span class="challenge-letter">A</span><h3>Different entry scenarios</h3><p>Customers, couriers, interview candidates, channel partners, and VIPs each bring different information and handling needs.</p></article>
+          <article class="challenge-card"><span class="challenge-letter">B</span><h3>Reliable information</h3><p>Registration depended partly on Salesforce and greythr data, where available fields did not always match the initial designs.</p></article>
+          <article class="challenge-card"><span class="challenge-letter">C</span><h3>Visibility after check-in</h3><p>Receptionists needed actionable visit records; management needed summarized, filterable, and shareable views across sites.</p></article>
+        </div>
+        <blockquote class="challenge-quote">
+          <span aria-hidden="true">“</span>
+          <p>How might we make workplace check-in easier to operate while keeping visitor information, approval activity, and reporting organized across locations?</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span>03</span> My approach</p>
+          <h2>From requirements<br>to rollout.</h2>
+          <p class="section-lead">I mapped each user group’s tasks, structured the information, and refined the interface with stakeholders and engineers as implementation constraints became clearer.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card"><span>01</span><h3>Discover</h3><p>Gather requirements, stakeholder inputs, user needs, and task flows.</p></article>
+          <article class="process-card"><span>02</span><h3>Structure</h3><p>Define information architecture and explore low-fidelity wireframes.</p></article>
+          <article class="process-card"><span>03</span><h3>Design</h3><p>Develop and review high-fidelity web and mobile screens in Figma.</p></article>
+          <article class="process-card"><span>04</span><h3>Deliver</h3><p>Iterate for feasibility, hand off to developers, and support rollout and training.</p></article>
+        </div>
+        <div class="process-rail" aria-label="Design and delivery sequence">
+          <span>Requirements</span><i aria-hidden="true">→</i><span>User flows</span><i aria-hidden="true">→</i><span>Wireframes</span><i aria-hidden="true">→</i><span>Figma UI</span><i aria-hidden="true">→</i><span>Technical iteration</span><i aria-hidden="true">→</i><span>Rollout support</span>
+        </div>
+        <p class="fine-print">No formal usability test results or research sample sizes were supplied for this project.</p>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="solution">
+      <div class="container">
+        <div class="section-heading section-heading-dark">
+          <p class="eyebrow"><span>04</span> Key solution · Registration</p>
+          <h2>A guided check-in,<br><em>adapted to the visitor.</em></h2>
+          <p class="section-lead">The receptionist-facing flow breaks registration into understandable stages: identify the visit, capture the right details, select the host, review security information, and confirm.</p>
+        </div>
+        <div class="checkin-flow" aria-label="Visitor registration steps">
+          <span>Choose category</span><i aria-hidden="true">→</i><span>Verify identity</span><i aria-hidden="true">→</i><span>Visitor details</span><i aria-hidden="true">→</i><span>Select host</span><i aria-hidden="true">→</i><span>Review + pass</span>
+        </div>
+        <div class="form-showcase">
+          <div class="form-window">
+            <div class="window-top"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>NEW VISITOR · STEP 02 OF 04</span><span class="window-save">Draft saved</span></div>
+            <div class="form-progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="form-content">
+              <p class="form-kicker">VISITOR INFORMATION</p>
+              <h3>Tell us about your visitor</h3>
+              <p class="form-description">Add the details needed to prepare for their arrival.</p>
+              <div class="fake-form-grid">
+                <div class="fake-field"><span>Visitor type</span><strong>Customer <b>⌄</b></strong></div>
+                <div class="fake-field"><span>Verified contact</span><strong>+91 ••••• ••482</strong></div>
+                <div class="fake-field"><span>Visitor name</span><strong class="placeholder">Enter full name</strong></div>
+                <div class="fake-field"><span>Company / organization</span><strong class="placeholder">Optional</strong></div>
+              </div>
+              <div class="form-actions"><span>← Back</span><b>Continue <span aria-hidden="true">→</span></b></div>
+            </div>
+          </div>
+          <div class="showcase-caption"><span class="caption-mark">✳</span><p><strong>One step at a time.</strong><br>A conceptual, anonymized view of a category-aware registration form.</p></div>
+        </div>
+        <div class="decision-grid">
+          <article><span>01 / Structure</span><h3>Make progress visible</h3><p>Labelled stages help users understand what information is needed next in a longer registration flow.</p></article>
+          <article><span>02 / Relevance</span><h3>Adapt to visit type</h3><p>Category-specific fields keep the form focused on information relevant to that visit.</p></article>
+          <article><span>03 / Confidence</span><h3>Review before submission</h3><p>A preview step lets receptionists check the details before generating a visitor pass.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="channels">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span>05</span> Multi-channel experience</p>
+          <h2>Two ways in.<br>One connected process.</h2>
+        </div>
+        <div class="channel-grid">
+          <article class="channel-card">
+            <div class="channel-top"><span class="channel-icon" aria-hidden="true">▣</span><span>RECEPTIONIST-ASSISTED</span></div>
+            <h3>Web registration</h3>
+            <p>Receptionists can initiate visitor, courier, or VIP entries, manage employee selection and visitor details, and generate a QR-based pass.</p>
+            <div class="mini-flow"><span>Front desk</span><i aria-hidden="true">→</i><span>Register</span><i aria-hidden="true">→</i><span>Pass</span></div>
+            <div class="chip-row"><span>Operational control</span><span>Multiple entry types</span></div>
+          </article>
+          <article class="channel-card channel-card-accent">
+            <div class="channel-top"><span class="channel-icon" aria-hidden="true">⌗</span><span>VISITOR SELF-SERVICE</span></div>
+            <h3>Mobile QR-led flow</h3>
+            <p>Visitors scan a QR code to verify their phone, enter personal and security details, and submit a request for front-desk confirmation.</p>
+            <div class="mini-flow"><span>Scan</span><i aria-hidden="true">→</i><span>Verify</span><i aria-hidden="true">→</i><span>Submit</span></div>
+            <div class="chip-row"><span>Mobile-first capture</span><span>Receptionist confirmation</span></div>
+          </article>
+        </div>
+        <p class="fine-print">These are two entry paths into the same operational process, not claims of measured conversion improvement.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="operations">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span>06</span> Operations after arrival</p>
+          <h2>Check-in was only<br>the beginning.</h2>
+          <p class="section-lead">The product also needed to support what happens after registration: reviewing an entry, responding to its status, managing reassignment, checking a visitor out, and understanding activity history.</p>
+        </div>
+        <div class="operations-layout">
+          <div class="operation-list">
+            <article><span class="operation-icon" aria-hidden="true">↗</span><div><h3>Visitor overview</h3><p>Review entry details, visit purpose, contact information, status, and prior visits.</p></div></article>
+            <article><span class="operation-icon" aria-hidden="true">✓</span><div><h3>Actions and status</h3><p>Support approval, rejection, reassignment, and check-out in day-to-day operations.</p></div></article>
+            <article><span class="operation-icon" aria-hidden="true">≡</span><div><h3>Activity history</h3><p>Keep a record of actions and transitions to make individual visit histories easier to trace.</p></div></article>
+          </div>
+          <div class="status-panel">
+            <p class="status-label">A VISIT, AT A GLANCE</p>
+            <div class="status-step"><span>01</span><div><strong>Registration submitted</strong><small>Visitor or receptionist starts an entry</small></div><i class="status-check">✓</i></div>
+            <div class="status-connector"></div>
+            <div class="status-step"><span>02</span><div><strong>Review and assign</strong><small>Reception team checks the request</small></div><i class="status-check">✓</i></div>
+            <div class="status-connector"></div>
+            <div class="status-step"><span>03</span><div><strong>Approval decision</strong><small>Approved, rejected, or reassigned</small></div><i class="status-pending">•</i></div>
+            <div class="status-connector"></div>
+            <div class="status-step"><span>04</span><div><strong>Check-out and history</strong><small>Visit record remains available</small></div><i class="status-pending">•</i></div>
+            <p class="fine-print">Illustrative summary, not a complete technical state diagram.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reporting">
+      <div class="container reporting-layout">
+        <div class="reporting-copy">
+          <p class="eyebrow"><span>07</span> Reporting and visibility</p>
+          <h2>Make activity<br><span class="text-accent">easier to understand.</span></h2>
+          <p class="section-lead">The reporting experience was planned around the information collected through FrontDesk and the day-to-day questions receptionists and management needed to answer.</p>
+          <ul class="reporting-list">
+            <li><span>01</span><div><strong>Filter by context</strong><p>Explore daily, weekly, or monthly views by location and department.</p></div></li>
+            <li><span>02</span><div><strong>Make data portable</strong><p>Export selected operational information to share with management.</p></div></li>
+            <li><span>03</span><div><strong>Support recurring updates</strong><p>Scheduled email reporting was planned for daily, weekly, and monthly updates.</p></div></li>
+          </ul>
+        </div>
+        <div class="report-preview" aria-label="Illustrative workplace activity dashboard; no real metrics shown">
+          <div class="report-top"><div><span>WORKPLACE ACTIVITY</span><strong>Overview</strong></div><span class="report-filter">All locations⌄</span></div>
+          <div class="report-stats"><div><small>Visitors</small><b>—</b></div><div><small>Couriers</small><b>—</b></div><div><small>QR check-ins</small><b>—</b></div></div>
+          <div class="report-chart"><div class="report-chart-head"><strong>Activity by period</strong><span>Monthly⌄</span></div><div class="report-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="report-months"><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span></div></div>
+          <p class="fine-print">Illustrative dashboard · no measured results</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-constraints" id="constraints">
+      <div class="container">
+        <div class="section-heading section-heading-dark">
+          <p class="eyebrow"><span>08</span> Working through constraints</p>
+          <h2>The design had to work<br>with real systems.</h2>
+          <p class="section-lead">Technical feasibility became a key consideration during handoff. Engineering raised implementation and timing constraints, while integration stakeholders clarified what Salesforce and Great HR data could provide.</p>
+        </div>
+        <div class="constraint-grid">
+          <article><span>01 / Feasibility</span><h3>Design for what can ship</h3><p>Revisited parts of the interface when proposed behavior could not be delivered within the available implementation window.</p></article>
+          <article><span>02 / Salesforce</span><h3>Account for data gaps</h3><p>Adapted fields and flows to available Salesforce data, including gaps in project-related information.</p></article>
+          <article><span>03 / Great HR</span><h3>Align with API availability</h3><p>Worked with HR and technical stakeholders to revise employee-related fields around available API data.</p></article>
+        </div>
+        <p class="constraint-takeaway"><span aria-hidden="true">↗</span> The first design was a hypothesis, not a fixed specification. I adjusted scope and data capture so the experience remained implementable.</p>
+      </div>
+    </section>
+
+    <section class="section" id="rollout">
+      <div class="container rollout-layout">
+        <div class="rollout-copy">
+          <p class="eyebrow"><span>09</span> Rollout and enablement</p>
+          <h2>Ownership beyond<br>the Figma handoff.</h2>
+          <p class="section-lead">My responsibility continued through deployment support, receptionist onboarding, and day-to-day operational queries.</p>
+          <div class="office-list" aria-label="Rollout offices">
+            <span><i>BLR</i> Bengaluru · Head Office</span>
+            <span><i>BLR</i> Bengaluru · S&amp;M Office</span>
+            <span><i>HYD</i> Hyderabad · Sales Office</span>
+          </div>
+        </div>
+        <div class="rollout-timeline">
+          <article><span>01</span><div><h3>Coordinate implementation</h3><p>Worked with developers and business stakeholders to resolve questions and update designs during delivery.</p></div></article>
+          <article><span>02</span><div><h3>Train operational users</h3><p>Conducted training for receptionists across the offices where FrontDesk was rolled out.</p></div></article>
+          <article><span>03</span><div><h3>Support adoption</h3><p>Acted as a point of contact for receptionist questions and helped resolve reported issues.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="outcome">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span>10</span> Outcome and reflection</p>
+          <h2>A more connected<br>operational experience.</h2>
+          <p class="section-lead">The designed product connected entry workflows with the operational tools and reporting needed to manage visits across multiple locations.</p>
+        </div>
+        <div class="outcome-grid">
+          <article><span>01</span><h3>Connected entry workflows</h3><p>A shared application experience for visitor, courier, employee, and VIP-related check-in scenarios.</p></article>
+          <article><span>02</span><h3>Structured operations</h3><p>Visitor passes, status actions, searchable entry records, and activity history in one system.</p></article>
+          <article><span>03</span><h3>Management visibility</h3><p>Location-aware dashboards, filterable reports, exports, and planned scheduled email updates.</p></article>
+        </div>
+        <div class="reflection">
+          <span class="reflection-mark" aria-hidden="true">✳</span>
+          <div><p class="eyebrow">What I took forward</p><h3>Enterprise design is a balance between user workflows, business needs, system constraints, and real-world adoption.</h3></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><a class="brand brand-light" href="../index.html">Rahul V<span>.</span></a><p>Product design for thoughtful digital experiences.</p></div>
+      <div class="footer-actions"><a class="footer-link" href="../index.html#work">Back to all projects <span aria-hidden="true">↗</span></a><a class="back-top" href="#main">Back to top ↑</a></div>
+      <p class="footer-note">FrontDesk · Product design case study</p>
+    </div>
+  </footer>
+</body>
+</html>
