@@ -2,6 +2,9 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 e.target.querySelectorAll('.n').forEach(n=>{const t=+n.dataset.t;let c=0;const s=setInterval(()=>{c++;n.textContent=c;if(c>=t)clearInterval(s)},900/t)});
 io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+requestAnimationFrame(()=>requestAnimationFrame(()=>{
+document.querySelectorAll('.hero .rv').forEach(e=>e.classList.add('in'));
+}));
 const projectCards=[...document.querySelectorAll('.proj')];
 const viewAllButton=document.querySelector('#viewAllProjects');
 const initialProjectCount=3;
