@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Voice Sumadura — designing an AI-assisted call quality review and feedback workflow. Product design case study by Rahul."><meta name="theme-color" content="#101529"><title>Voice Sumadhura — Product Design Case Study</title><style>
+
+:root{--ink:#151a2e;--muted:#626b83;--purple:#644bd5;--violet:#eae6ff;--line:#e5e7ee;--paper:#fff;--soft:#f7f8fc;--dark:#101529}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:white;color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 34px}.top{height:76px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:21px;font-weight:850;letter-spacing:-.9px}.brand i{font-style:normal;color:var(--purple)}.nav{display:flex;gap:26px;color:#4b5268;font-size:13px;font-weight:600}.nav a:hover{color:var(--purple)}.pill{display:inline-block;border-radius:99px;padding:8px 14px;border:1px solid #dddaf8;background:#f2efff;color:#6549bd;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}.hero{background:radial-gradient(circle at 77% 22%,#40336a 0,transparent 38%),linear-gradient(130deg,#0e1428,#1b1c40 75%,#282359);color:white;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1.06fr;gap:38px;align-items:center;padding:90px 0 105px}.hero h1{font-size:clamp(56px,7vw,92px);line-height:.97;letter-spacing:-5px;margin:24px 0 22px}.hero h1 span{color:#b6a9ff}.lead{color:#c6c9dc;max-width:525px;font-size:19px;line-height:1.6}.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-tags span{border:1px solid #585777;color:#e1dffa;padding:8px 14px;border-radius:50px;font-size:12px}.hero-caption{color:#9ca1c0;font-size:12px;margin-top:23px}.visual-shell{transform:rotate(-3deg);background:#f5f5ff;padding:13px;border-radius:18px;box-shadow:0 30px 65px #0008;border:1px solid #ffffff44}.mock{display:flex;background:#fafbff;color:#202442;border-radius:11px;overflow:hidden;min-height:340px;font-size:9px}.side{width:75px;background:#6d50c8;color:#efeaff;flex-shrink:0;padding:16px 10px}.slogo{font-size:10px;font-weight:900;letter-spacing:1px;margin-bottom:27px}.sitem{padding:8px 5px;border-radius:5px;margin:6px 0;font-size:8px}.sitem.active{background:#ffffff28}.marea{padding:18px 17px;flex:1;min-width:0}.mtop{display:flex;justify-content:space-between;margin-bottom:17px}.mheading{font-weight:850;font-size:16px}.met{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{background:white;border:1px solid #ececf5;padding:12px 9px;border-radius:7px}.metric b{font-size:17px;display:block}.metric small{font-size:8px;color:#8a8ba4}.charts{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;margin-top:10px}.chart{border-radius:7px;border:1px solid #ececf5;background:white;padding:12px;min-height:134px}.chart h5{font-size:9px;margin:0 0 10px}.donut{width:90px;height:90px;margin:0 auto;border-radius:50%;background:conic-gradient(#484a95 0 42%,#bf78d2 42% 67%,#54b9a2 67% 86%,#f0ab6a 86%);position:relative}.donut:after{content:"";position:absolute;inset:26px;background:white;border-radius:50%}.curve{width:100%;height:78px}.screenlabel{text-align:right;color:#a8a9c6;font-size:10px;margin-top:8px}.meta{border-bottom:1px solid var(--line);background:#fff}.metadata{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:25px 0}.metadata small{display:block;font-size:11px;color:#7b849a;text-transform:uppercase;letter-spacing:1.1px;font-weight:750}.metadata b{font-size:14px}.section{padding:108px 0}.section.alt{background:var(--soft)}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--purple);margin:0 0 15px}.section h2{font-size:clamp(32px,4vw,53px);letter-spacing:-2.1px;line-height:1.15;margin:0 0 26px}.section p{color:var(--muted)}.intro{font-size:19px;max-width:790px;line-height:1.75}.split{display:grid;grid-template-columns:1fr 1fr;gap:75px}.split h3{font-size:24px;letter-spacing:-.7px;margin:0 0 15px}.stack{display:grid;gap:15px}.box{background:white;border:1px solid var(--line);border-radius:15px;padding:26px}.box h3{font-size:18px;margin:0 0 7px}.box p{margin:0;font-size:14px}.num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;background:#ebe7ff;color:#684ed1;font-weight:800;margin-bottom:14px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.mini h4{margin:0 0 7px;font-size:17px}.mini p{font-size:14px;margin:0}.flow{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin:30px 0}.step{background:white;border:1px solid #dedeea;border-radius:12px;padding:15px 18px;font-weight:750;font-size:13px}.arr{color:var(--purple);font-weight:800}.note{font-size:13px;color:#7b8195!important}.quote{background:#ebe8fd;border-left:4px solid var(--purple);padding:20px 26px;border-radius:0 12px 12px 0;color:#3e3970;font-weight:650;margin-top:20px}.panel{padding:33px;border:1px solid #e4e4f0;border-radius:20px;background:white}.badge{font-size:11px;color:#6650cc;font-weight:800;letter-spacing:1.5px}.panel h3{font-size:26px;letter-spacing:-1px;margin:9px 0}.panel p{font-size:14px}.ui-demo{background:#f1f1fa;padding:26px;border-radius:15px;margin:30px 0}.check-demo{max-width:770px;margin:auto;background:#fff;border:1px solid #e6e5ed;padding:25px;border-radius:13px;box-shadow:0 15px 32px #25305413}.progress{display:flex;gap:5px;margin-bottom:22px}.progress span{height:5px;background:#dedff0;flex:1;border-radius:3px}.progress span:nth-child(-n+2){background:#6550d4}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.fakeinput{border:1px solid #dfe0eb;border-radius:6px;padding:11px 12px;font-size:12px;color:#606984}.fakeinput strong{display:block;font-size:10px;color:#9096a8;padding-bottom:5px}.fakebtn{background:#6852dc;color:#fff;border-radius:6px;display:inline-block;font-size:11px;font-weight:750;padding:10px 22px;margin-top:18px;float:right}.clear{clear:both}.case{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}.case .box{border-top:3px solid #a69af2}.case .box b{font-size:13px}.decision{display:grid;grid-template-columns:55px 1fr;gap:18px;margin:22px 0}.decision .circle{border-radius:13px;background:#eae6ff;color:#624aca;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;width:50px;height:50px}.decision h3{margin:0;font-size:19px}.decision p{margin:5px 0 0}.dashboard-visual{border:1px solid #e6e5f2;background:#fbfbff;border-radius:17px;padding:26px;margin-top:24px;box-shadow:0 15px 35px #10132c0a}.dashboard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.dashboard-top h4{margin:0;font-size:20px}.filter{background:white;border:1px solid #e4e6ef;border-radius:7px;padding:9px 14px;font-size:11px;color:#5b6078}.mini-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.mini-metrics div{background:white;border:1px solid #e8e8f0;border-radius:11px;padding:16px}.mini-metrics small{display:block;font-size:10px;color:#747d92}.mini-metrics strong{font-size:25px;color:#473a9b}.bars{height:150px;display:flex;align-items:end;gap:16px;padding:14px 0 0;border-bottom:1px solid #ddd}.bars i{display:block;background:linear-gradient(#816ce1,#c5bafb);border-radius:6px 6px 0 0;flex:1}.footline{font-size:11px;margin-top:8px;color:#8d93a8}.tech{background:var(--dark);color:white}.tech p{color:#b5bdd8}.tech .box{background:#1b2138;border-color:#333b52}.tech .box h3{color:white}.tech .box p{color:#b6bdd1}.tech .eyebrow{color:#b8a8ff}.tech h2{color:white}.outcome{background:#f7f8fc;border:1px solid #e3e5ed;border-radius:15px;padding:25px}.outcome h3{margin:0 0 10px;font-size:19px}.outcome p{font-size:14px;margin:0}.callout{font-weight:700;font-size:23px!important;color:#322f61!important;border-top:1px solid #e5e5ee;padding-top:27px;margin-top:30px}.footer{background:#11172b;color:white;padding:65px 0}.footer .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer h2{font-size:35px;letter-spacing:-1.5px;margin:0}.footer p{color:#acb3cb}.footer a{background:#8d78ed;color:white;border-radius:8px;padding:13px 19px;font-size:13px;font-weight:800}.privacy{background:#fff7ed;border-left:4px solid #e9a545;padding:15px 20px;border-radius:6px;font-size:13px;color:#76512a}.diagram{border:1px solid #e2e3ed;border-radius:13px;background:white;padding:25px;margin:26px 0}.diagram .flow{margin:0}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}.smallp{font-size:14px}.mini-tag{display:inline-block;background:#e9e6fb;color:#6150b2;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800;margin:4px 3px 0 0}.toc{display:flex;flex-wrap:wrap;gap:9px;margin:28px 0 0}.toc a{font-size:12px;border:1px solid #dcdde8;border-radius:100px;padding:8px 12px;color:#59617a}.toc a:hover{border-color:#755bd8;color:#644bd5}@media(max-width:850px){.hero-grid,.split,.two-col{grid-template-columns:1fr}.hero-grid{padding:65px 0}.hero h1{letter-spacing:-3px}.three,.four{grid-template-columns:repeat(2,1fr)}.metadata{grid-template-columns:repeat(2,1fr)}.visual-shell{transform:none}.section{padding:72px 0}.nav{display:none}}@media(max-width:540px){.wrap{padding:0 20px}.hero-grid{gap:35px}.hero h1{font-size:57px}.lead{font-size:17px}.three,.four,.case,.formgrid{grid-template-columns:1fr}.visual-shell{padding:6px}.mock{min-height:270px}.side{width:54px;padding:10px 5px}.marea{padding:12px 8px}.met{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.charts .chart:nth-child(2){display:none}.metadata{gap:15px}.mini-metrics{grid-template-columns:repeat(2,1fr)}.panel{padding:22px}.flow{gap:7px}.step{font-size:11px;padding:10px}.footer .wrap{display:block}.footer a{display:inline-block;margin-top:12px}}
+
+
+/* Voice Sumadhura: additive styles only. Original Frontdesk palette/tokens remain unchanged. */
+:focus-visible {outline:3px solid var(--purple); outline-offset:4px}
+a, button { -webkit-tap-highlight-color:transparent }
+.skip {position:absolute;left:14px;top:-80px;z-index:1000;background:#fff;color:var(--dark);padding:10px 16px;border-radius:8px}
+.skip:focus {top:12px}
+.mobile-nav {display:none;position:relative;font-size:13px;font-weight:700}
+.mobile-nav summary {list-style:none;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.mobile-nav summary::-webkit-details-marker {display:none}
+.mobile-nav summary:before {content:'☰';margin-right:8px;color:var(--purple)}
+.mobile-nav[open] .mobile-links {position:absolute;z-index:20;right:0;top:44px;background:#fff;box-shadow:0 20px 35px #11172b20;border:1px solid var(--line);border-radius:12px;min-width:205px;padding:12px;display:grid;gap:4px}
+.mobile-links a {padding:10px;border-radius:8px}
+.mobile-links a:hover {background:var(--soft);color:var(--purple)}
+.hero-grid {grid-template-columns: 0.93fr 1.07fr}
+.hero h1 {font-size:clamp(57px,6.7vw,90px)}
+.hero h1 .break {display:block}
+.hero .pill {border-color:#7e72aa;background:#ffffff17;color:#e6e0ff}
+.hero-inner-link {display:inline-flex;align-items:center;gap:7px;margin-top:24px;color:#dcd5ff;font-weight:700;font-size:13px;text-decoration:underline;text-underline-offset:5px}
+.hero .concept-tag {font-size:10px;display:inline-flex;align-items:center;gap:6px;color:#8b83b0;background:#ffffffec;border-radius:30px;padding:4px 9px;margin-top:7px}
+.hero-shell {transform:rotate(-2deg)}
+.hero-mock {min-height:324px;display:grid;grid-template-columns:86px minmax(0,1fr)}
+.hero-mock .side {width:auto}
+.hero-mock .slogo {font-size:9px;white-space:nowrap}
+.hero-mock .marea {padding:17px 14px}
+.vm-heading {font-size:13px;font-weight:800;letter-spacing:-.2px}
+.vm-sub {font-size:8px;color:#8187a5}
+.vm-panel {background:#fff;border:1px solid #e9e8f3;border-radius:8px;padding:11px}
+.vm-two {display:grid;grid-template-columns:1.1fr .9fr;gap:8px;margin-top:11px}
+.vm-stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:12px}
+.vm-stat {border:1px solid #e8e8f2;background:white;border-radius:7px;padding:10px 8px}
+.vm-stat small {display:block;color:#777d97;font-size:8px}
+.vm-stat strong {font-size:13px;line-height:1.6}
+.vm-wave {height:64px;display:flex;align-items:center;justify-content:space-between;gap:2px;padding:6px 3px}
+.vm-wave i {display:block;background:#9986e9;border-radius:4px;width:3px;min-width:2px;flex:1}
+.vm-wave i:nth-child(4n) {background:#6c58d4}
+.vm-timeline {background:#efedfb;border-radius:6px;height:4px;position:relative;margin:5px 0 9px}
+.vm-timeline:before {content:"";position:absolute;height:4px;width:43%;background:#765edf;border-radius:6px;left:0}
+.vm-timeline:after {content:"";position:absolute;border:3px solid #fff;box-shadow:0 0 0 1px #7361d3;background:#7361d3;border-radius:50%;width:5px;height:5px;left:42%;top:-3px}
+.vm-quality {display:flex;gap:4px;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0f0f7;font-size:8px}
+.vm-quality:last-child {border:0}
+.vm-quality b {color:#5745bd;font-size:9px}
+.vm-quality .muted {color:#6d7390}
+.vm-alert {color:#5143a6;background:#f1eefd;border-radius:6px;padding:9px;margin-top:8px;font-size:9px}
+.vm-micro {background:#ece9fc;color:#5142a8;display:inline-block;border-radius:8px;padding:3px 7px;font-size:8px;font-weight:800}
+.hero-mock-caption {text-align:right;font-size:10px;color:#969ac1;margin-top:8px}
+.numbered {display:flex;gap:16px;align-items:flex-start}
+.numbered .num {flex-shrink:0}
+.numbered h3 {margin:0 0 6px;font-size:19px}
+.numbered p {margin:0}
+.compact {display:grid;gap:17px}
+.sect-link {font-size:13px;font-weight:800;color:var(--purple);border-bottom:1px solid currentColor}
+.status-line {font-size:12px;font-weight:700;letter-spacing:.2px;color:#6852b9}
+.review-note {font-size:14px!important;color:#5a6280!important}
+.bold-note {font-size:19px;font-weight:750;color:var(--ink)!important}
+.mock-panel {border:1px solid #e5e4f0;border-radius:17px;background:#f8f8fd;padding:22px;overflow:hidden}
+.ui-row {display:grid;grid-template-columns:230px 1fr;gap:14px}
+.ui-rail {border-radius:11px;background:#f1effb;padding:20px}
+.ui-rail h4 {margin:0 0 14px;color:#5542b9}
+.ui-rail .rail-item {font-size:12px;display:block;color:#676c8a;padding:10px 9px;border-radius:8px}
+.ui-rail .rail-item.current {color:#4939a4;background:#e8e2ff;font-weight:750}
+.ui-main {background:#fff;border:1px solid #ebebf3;border-radius:11px;padding:21px;min-width:0}
+.ui-top {display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ui-top h4 {font-size:18px;margin:0;color:var(--ink)}
+.ui-pill {padding:5px 10px;border:1px solid #dcd8f8;background:#f2efff;color:#5a49b1;font-size:10px;font-weight:750;border-radius:40px}
+.ui-filters {display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+.ui-filter {font-size:11px;border:1px solid #e1dfec;border-radius:8px;padding:7px 10px;color:#737b95;background:#fff}
+.ui-kpis {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.ui-kpis>div {border-radius:10px;border:1px solid #e7e5f0;background:#fbfaff;padding:15px}
+.ui-kpis b {display:block;font-size:19px;color:#4b409d}
+.ui-kpis small {color:#727a92;font-size:11px}
+.ui-table {width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px;margin-top:15px}
+.ui-table th {text-align:left;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#8289a0;border-bottom:1px solid #e6e6f0;padding:11px 7px}
+.ui-table td {padding:13px 7px;border-bottom:1px solid #f1f1f6;color:#444d69;word-break:break-word}
+.ui-table tr:last-child td {border:0}
+.dot {display:inline-block;width:6px;height:6px;background:#765fd3;border-radius:50%;margin-right:6px}
+.ui-link {font-weight:800;color:var(--purple)}
+.review-grid {display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:15px}
+.review-grid .ui-main {height:100%}
+.fake-meter {height:7px;background:#f0edfc;border-radius:10px;margin:8px 0 15px;overflow:hidden}
+.fake-meter span {display:block;background:#7967d9;height:100%;border-radius:10px;width:65%}
+.stamp {display:flex;justify-content:space-between;align-items:start;gap:10px;border-bottom:1px solid #ecebf2;padding:12px 0;font-size:13px}
+.stamp b {display:block;font-size:13px;color:#343750}
+.stamp small {font-size:11px;color:#69718d;display:block;margin-top:4px}
+.vm-btn {display:inline-block;padding:9px 13px;border-radius:7px;background:var(--purple);color:#fff;font-size:11px;font-weight:800}
+.vm-btn.ghost {color:var(--purple);background:#f0edfe}
+.disclaimer {font-size:12px!important;color:#858aa0!important}
+.solution-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.role-card {background:white;border:1px solid #e3e2ee;padding:25px;border-radius:17px}
+.role-card small {color:var(--purple);text-transform:uppercase;letter-spacing:1.5px;font-size:10px;font-weight:850}
+.role-card h3 {font-size:20px;margin:15px 0 9px}
+.role-card p {font-size:14px;margin:0}
+.role-card .flow {margin-bottom:0}
+.role-card .mini-tag {font-size:10px}
+.compare {display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:29px}
+.compare-card {padding:26px;border:1px solid var(--line);border-radius:14px;background:white}
+.compare-card h3 {font-size:18px;margin:0 0 12px}
+.compare-card p {font-size:14px}
+.compare-card .micro-list {list-style:none;margin:0;padding:0;display:grid;gap:12px;color:#5b6684;font-size:14px}
+.compare-card li:before {content:"•";color:var(--purple);font-size:20px;margin-right:9px}
+.callout-white {border-radius:14px;padding:23px;background:#fff;border:1px solid #e4e2ed;color:#41377a;font-size:18px;font-weight:700}
+.inline-status {display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#6e59cf;background:#eeeafe;border-radius:20px;padding:6px 12px}
+.inline-status:before {content:"";display:block;width:7px;height:7px;border-radius:50%;background:#907fe2}
+@media (max-width:950px) {
+  .hero-grid {grid-template-columns:1fr}
+  .hero-shell {max-width:690px;margin:0 auto;transform:none}
+  .ui-row {grid-template-columns:190px minmax(0,1fr)}
+  .solution-grid {grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:850px) {
+  .mobile-nav {display:block}
+  .top>.pill {display:none}
+  .review-grid,.compare {grid-template-columns:1fr}
+}
+@media (max-width:620px) {
+  .hero h1 {font-size:clamp(48px,13vw,65px);letter-spacing:-3.2px;overflow-wrap:anywhere}
+  .hero-grid {padding:58px 0}
+  .hero-shell {padding:6px}
+  .hero-mock {grid-template-columns:57px minmax(0,1fr);min-height:260px}
+  .hero-mock .side {padding:12px 4px}
+  .hero-mock .slogo {font-size:7px}
+  .hero-mock .sitem {font-size:7px;overflow:hidden;white-space:nowrap}
+  .hero-mock .marea {padding:12px 8px}
+  .vm-stats {grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+  .vm-stat {padding:7px 4px}
+  .vm-stat strong {font-size:11px}
+  .vm-stat small {font-size:7px}
+  .vm-two {grid-template-columns:1fr}
+  .vm-two .vm-panel:nth-child(2) {display:none}
+  .hero .lead {font-size:17px}
+  .ui-row {grid-template-columns:1fr}
+  .ui-rail {display:none}
+  .ui-main {padding:15px}
+  .ui-kpis {grid-template-columns:repeat(2,1fr)}
+  .ui-kpis>div:last-child {grid-column:1/-1}
+  .ui-table th:nth-child(2), .ui-table td:nth-child(2),
+  .ui-table th:nth-child(4), .ui-table td:nth-child(4) {display:none}
+  .mock-panel {padding:11px}
+  .solution-grid {grid-template-columns:1fr}
+  .stamp {flex-wrap:wrap}
+  .role-card {padding:21px}
+  .section h2 {overflow-wrap:break-word;letter-spacing:-1.1px}
+  .step {padding:10px 13px}
+  .footer h2 {font-size:30px}
+  .wrap {padding:0 20px}
+}
+@media (max-width:390px) {
+  .hero h1 {font-size:45px}
+  .hero-mock .sitem {font-size:6px}
+  .vm-heading {font-size:11px}
+  .metadata {grid-template-columns:1fr 1fr}
+  .metadata b {font-size:12px}
+  .review-grid .ui-main {padding:14px}
+}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+.hero-title-wrap {position:relative;width:max-content;max-width:100%}
+.hero-ai-tag {position:absolute;top:-18px;right:-20px;display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border:1px solid #332a40;border-radius:11px;background:#baf3dc;box-shadow:3px 4px 0 #7060a8;color:#211932;font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;transform:rotate(6deg);animation:ai-tag-float 3.8s ease-in-out infinite}
+.hero-ai-tag>span {font-size:14px}
+@keyframes ai-tag-float {
+  0%,100% {translate:0 0;rotate:0deg}
+  50% {translate:0 -6px;rotate:-2deg}
+}
+@media(max-width:620px) {
+  .hero-title-wrap {width:100%}
+  .hero-ai-tag {top:-24px;right:4px;padding:6px 11px;font-size:10px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-ai-tag {animation:none}
+}
+#overview .split>.overview-copy {align-self:stretch}
+#overview .overview-pinned {position:sticky;top:104px}
+#overview .overview-notes {max-width:510px;margin-top:24px}
+#overview .split>.stack {align-content:start;gap:18px;padding-bottom:50vh}
+#overview .split>.stack>.box {position:sticky;top:calc(104px + var(--overview-offset,0px));z-index:var(--overview-layer,1);opacity:.55;transform:translateY(calc(var(--overview-lift,0px) + var(--overview-enter-y,24px))) scale(calc(var(--overview-scale,1) * var(--overview-enter-scale,.96)));transform-origin:top center;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .4s ease,box-shadow .3s ease;will-change:transform,opacity}
+#overview .split>.stack>.box.is-visible {--overview-enter-y:0px;--overview-enter-scale:1;opacity:1}
+#overview .split>.stack>.box:hover {box-shadow:0 18px 34px #34245a20}
+@media(max-width:850px) {
+  #overview .split {grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:0}
+  #overview .split>.overview-copy,#overview .split>.stack {grid-area:1/1}
+  #overview .split>.overview-copy {position:relative;z-index:4}
+  #overview .overview-pinned {position:sticky;top:12px;padding:8px 0 16px;background:#fff}
+  #overview .split>.stack {padding:400px 0 30vh}
+  #overview .split>.stack>.box {top:calc(400px + var(--overview-offset,0px));padding:22px}
+  #overview .section h2 {font-size:clamp(30px,7vw,42px);letter-spacing:-1.3px}
+  #overview .intro {font-size:16px;line-height:1.55}
+}
+@media(max-width:390px) {
+  #overview .split>.stack {padding-top:430px}
+  #overview .split>.stack>.box {top:calc(430px + var(--overview-offset,0px));padding:19px}
+}
+@media(max-width:360px) {
+  #overview .split>.stack {padding-top:450px}
+  #overview .split>.stack>.box {top:calc(450px + var(--overview-offset,0px))}
+}
+@media(prefers-reduced-motion:reduce) {
+  #overview .split>.stack>.box {opacity:1;transform:none!important;transition:none;will-change:auto}
+}
+
+</style></head><body>
+<a class="skip" href="#overview">Skip to case study</a>
+<header class="wrap top" id="top">
+  <a class="brand" href="../../index.html" aria-label="Rahul V homepage">Rahul V<span style="color:var(--purple)">.</span> <i></i></a>
+  <nav class="nav" aria-label="Case study navigation"><a href="#overview">Overview</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#outcomes">Outcomes</a></nav>
+  <span class="pill">Case study / 03</span>
+  <details class="mobile-nav"><summary>Menu</summary><div class="mobile-links"><a href="#overview">Overview</a><a href="#process">Process</a><a href="#solution">Solution</a><a href="#outcomes">Outcomes</a><a href="../../index.html#work">All work</a></div></details>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+<div class="wrap hero-grid">
+<div>
+  <span class="pill">Enterprise product design · AI-assisted operations</span>
+  <div class="hero-title-wrap"><h1 id="hero-title">Voice<span> Sumadhura.</span></h1><span class="hero-ai-tag"><span aria-hidden="true">✦</span> AI</span></div>
+  <p class="lead">Rethinking how pre-sales conversations are reviewed, understood, and improved through an AI-assisted quality workflow.</p>
+  <div class="hero-tags"><span>Enterprise UX</span><span>Desktop web</span><span>AI-assisted analysis</span><span>Design stage</span></div>
+  <p class="hero-caption">Self-contained concept illustration · No company screenshots or customer data shown</p>
+  <a class="hero-inner-link" href="#overview">Explore the case study <span aria-hidden="true">↓</span></a>
+</div>
+<div>
+  <div class="visual-shell hero-shell" aria-label="Conceptual illustration of Voice Sumadhura call review interface">
+    <div class="mock hero-mock">
+      <div class="side"><div class="slogo">VOICE SUMADURA</div><div class="sitem active">▦ &nbsp; Overview</div><div class="sitem">▷ &nbsp; Calls</div><div class="sitem">☰ &nbsp; Feedback</div><div class="sitem">▤ &nbsp; Reports</div></div>
+      <div class="marea">
+        <div class="mtop"><div><strong class="vm-heading">Call quality overview</strong><div class="vm-sub">Review workspace / illustrative</div></div><span class="vm-micro">DESIGN CONCEPT</span></div>
+        <div class="vm-stats"><div class="vm-stat"><small>Call reviews</small><strong>—</strong></div><div class="vm-stat"><small>Awaiting review</small><strong>—</strong></div><div class="vm-stat"><small>Acknowledgements</small><strong>—</strong></div></div>
+        <div class="vm-two">
+          <div class="vm-panel"><strong class="vm-heading">Recording / Call 01</strong><div class="vm-sub">Multilingual audio · Reviewer controlled</div><div class="vm-wave" aria-hidden="true"><i style="height:18%"></i><i style="height:53%"></i><i style="height:28%"></i><i style="height:72%"></i><i style="height:39%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:58%"></i><i style="height:27%"></i><i style="height:73%"></i><i style="height:51%"></i><i style="height:81%"></i><i style="height:32%"></i><i style="height:66%"></i><i style="height:20%"></i><i style="height:60%"></i><i style="height:49%"></i><i style="height:85%"></i><i style="height:36%"></i><i style="height:56%"></i></div><div class="vm-timeline"></div><span class="vm-micro">▶ &nbsp; Replay moments</span></div>
+          <div class="vm-panel"><strong class="vm-heading">Review checklist</strong><div class="vm-quality"><span>Communication</span><b>1–5</b></div><div class="vm-quality"><span>Customer needs</span><b>1–5</b></div><div class="vm-quality"><span>Project accuracy</span><b>1–5</b></div><div class="vm-quality"><span>Call handling</span><b>1–5</b></div><div class="vm-alert">Analyst confirms before feedback is sent.</div></div>
+        </div>
+        <div class="screenlabel">Conceptual interface only · No real scores</div>
+      </div>
+    </div>
+  </div>
+  <p class="hero-mock-caption">Visual created for storytelling; not a deployed product screenshot.</p>
+</div>
+</div></section>
+<section class="meta" aria-label="Project information"><div class="wrap metadata">
+  <div><small>My role</small><b>UI/UX Product Designer</b></div>
+  <div><small>Product</small><b>AI-assisted enterprise tool</b></div>
+  <div><small>Platform</small><b>Desktop web application</b></div>
+  <div><small>Status</small><b>In design · Not yet live</b></div>
+</div></section>
+
+<section class="section" id="overview"><div class="wrap">
+  <div class="split">
+    <div class="overview-copy"><div class="overview-pinned"><p class="eyebrow">01 / Project overview</p><h2>From isolated call reviews<br>to a connected feedback loop.</h2><p class="intro">Voice Sumadhura is a proposed AI-assisted platform for assessing customer conversations, documenting call-quality feedback, and supporting improvement across pre-sales teams.</p></div></div>
+    <div class="stack"><div class="box"><span class="num">01</span><h3>Review the conversation</h3><p>Bring recordings and AI-generated suggestions into a dedicated analyst workspace.</p></div><div class="box"><span class="num">02</span><h3>Share clear feedback</h3><p>Notify an executive only after an analyst has finalized the review.</p></div><div class="box"><span class="num">03</span><h3>Understand progress</h3><p>Give managers visibility into ratings, acknowledgements, disputes, and recurring issues.</p></div></div>
+  </div>
+  <div class="overview-notes"><p>Today, reviewers listen to recordings, document errors manually, and share feedback through disconnected channels. The proposed product brings analysis, human validation, employee acknowledgement, and manager visibility into one experience.</p><p class="status-line">Project status: design stage. Benefits described here are goals, not measured outcomes.</p></div>
+</div></section>
+
+<section class="section alt" id="challenge"><div class="wrap">
+  <p class="eyebrow">02 / Defining the problem</p><h2>The challenge wasn't just<br>listening to a recording.</h2>
+  <p class="intro">Discussions with quality reviewers and pre-sales teams surfaced a wider operational problem: review effort, fragmented communication, and limited evidence of follow-through.</p>
+  <div class="three">
+    <div class="box"><span class="num">A</span><h3>Slow manual review</h3><p>Analysts listen through entire calls—reportedly around 25–40 minutes per reviewed recording—and document observations by hand.</p></div>
+    <div class="box"><span class="num">B</span><h3>Feedback is scattered</h3><p>Written notes may be photographed and shared through messaging tools, making them harder to organize and revisit.</p></div>
+    <div class="box"><span class="num">C</span><h3>Follow-through is unclear</h3><p>Reviewers cannot consistently tell whether an executive read a comment or avoided repeating the same mistake later.</p></div>
+  </div>
+  <p class="quote">How might we help analysts review customer conversations more efficiently, while making feedback clearer to executives and improvement easier to monitor?</p>
+</div></section>
+
+<section class="section" id="process"><div class="wrap">
+  <p class="eyebrow">03 / My role & process</p><h2>Understand the people.<br>Then shape the workflow.</h2>
+  <p class="intro">I gathered requirements from project managers, discussed day-to-day problems with pre-sales teams, documented existing and proposed workflows, and translated the findings into design explorations and Figma screens.</p>
+  <div class="flow" aria-label="Design process"><span class="step">Requirements</span><span class="arr">→</span><span class="step">User conversations</span><span class="arr">→</span><span class="step">Workflow documentation</span><span class="arr">→</span><span class="step">Design exploration</span><span class="arr">→</span><span class="step">Stakeholder feedback</span></div>
+  <div class="two-col">
+    <div class="panel"><span class="badge">MY RESPONSIBILITY</span><h3>From business context to interface</h3><p>Requirement gathering, user discussions, workflow analysis, UX documentation, information architecture, low-fidelity exploration, and UI design.</p><p>Design artifacts were created during the project, but are intentionally not reproduced in this public case study.</p></div>
+    <div class="panel"><span class="badge">CROSS-FUNCTIONAL WORK</span><h3>Keeping the experience feasible</h3><p>Collaborated with project managers, pre-sales stakeholders, quality analysts, frontend and backend developers, data analysts, and QA testers.</p><p>The proposed flows were discussed with business users before final portfolio presentation.</p></div>
+  </div>
+</div></section>
+
+<section class="section alt" id="users"><div class="wrap">
+  <p class="eyebrow">04 / Users & needs</p><h2>Three roles.<br>One feedback journey.</h2>
+  <div class="three">
+    <div class="box"><span class="num">01</span><h3>Quality analyst</h3><p>Needs a faster way to find calls, evaluate errors, correct AI suggestions, and submit reliable feedback.</p><span class="mini-tag">Primary user</span></div>
+    <div class="box"><span class="num">02</span><h3>Pre-sales executive</h3><p>Needs to see only their own evaluated calls, understand mistakes, acknowledge the review, and request reconsideration if necessary.</p><span class="mini-tag">Feedback recipient</span></div>
+    <div class="box"><span class="num">03</span><h3>Pre-sales manager</h3><p>Needs team-wide visibility into review status, ratings, recurring problems, acknowledgements, and review changes.</p><span class="mini-tag">Team oversight</span></div>
+  </div>
+</div></section>
+
+<section class="section" id="solution"><div class="wrap">
+  <p class="eyebrow">05 / Proposed solution</p><h2>Connect analysis, review,<br>and action.</h2>
+  <p class="intro">Rather than letting AI publish a judgment automatically, the experience keeps the quality analyst responsible for validating what gets shared.</p>
+  <div class="diagram"><div class="flow"><span class="step">Import or sync calls</span><span class="arr">→</span><span class="step">AI-assisted analysis</span><span class="arr">→</span><span class="step">Analyst validation</span><span class="arr">→</span><span class="step">Submit review</span><span class="arr">→</span><span class="step">Executive acknowledgement</span><span class="arr">→</span><span class="step">Manager visibility</span></div></div>
+  <div class="solution-grid">
+    <div class="role-card"><small>01 · Analyst</small><h3>A focused review workspace</h3><p>Find a recording, listen to moments, compare AI suggestions with evidence, adjust the checklist, and submit a final review.</p></div>
+    <div class="role-card"><small>02 · Executive</small><h3>Feedback at the right moment</h3><p>Receive a notification only after submission, open the call's rating and notes, comment, acknowledge, or request re-review.</p></div>
+    <div class="role-card"><small>03 · Manager</small><h3>A clearer team overview</h3><p>Filter by executive, project, or date to understand trends, review changes, and follow-up status.</p></div>
+  </div>
+  <p class="note">All interface illustrations below are newly constructed portfolio concepts based on discussed requirements, not actual company screenshots or usability-tested screens.</p>
+</div></section>
+
+<section class="section alt" id="analyst"><div class="wrap">
+  <p class="eyebrow">06 / Analyst experience</p><h2>Make the next review<br>easy to find.</h2>
+  <p class="intro">The proposed analyst dashboard brings Salesforce-synced calls and manually imported recordings into one review queue. Analysts choose which call to analyze; files are not all processed automatically.</p>
+  <div class="mock-panel" aria-label="Illustrative analyst dashboard layout">
+    <div class="ui-row"><div class="ui-rail"><h4>Voice Sumadhura</h4><span class="rail-item current">▦ &nbsp; Overview</span><span class="rail-item">▷ &nbsp; Call records</span><span class="rail-item">☰ &nbsp; Reviews</span><span class="rail-item">▤ &nbsp; Reports</span></div>
+      <div class="ui-main"><div class="ui-top"><h4>Review queue</h4><span class="ui-pill">Illustrative layout</span></div>
+        <div class="ui-kpis"><div><small>Calls available</small><b>—</b></div><div><small>Reviewed today</small><b>—</b></div><div><small>Awaiting acknowledgement</small><b>—</b></div></div>
+        <div class="ui-filters"><span class="ui-filter">Date ▾</span><span class="ui-filter">Project ▾</span><span class="ui-filter">Language ▾</span><span class="ui-filter">Review status ▾</span></div>
+        <table class="ui-table"><thead><tr><th>Call</th><th>Project</th><th>Language</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Call 01</td><td>Project A</td><td>Tamil</td><td><span class="dot"></span>Pending</td><td><span class="ui-link">Start review</span></td></tr><tr><td>Call 02</td><td>Project B</td><td>English</td><td><span class="dot"></span>Reviewed</td><td><span class="ui-link">View review</span></td></tr><tr><td>Call 03</td><td>Project C</td><td>Kannada</td><td><span class="dot"></span>Pending</td><td><span class="ui-link">Start review</span></td></tr></tbody></table>
+      </div></div>
+  </div>
+  <p class="disclaimer">Example labels only. No real customer information, call records, or performance data are shown.</p>
+  <div class="compare"><div class="compare-card"><h3>Input flexibility</h3><ul class="micro-list"><li>Sync recordings through Salesforce APIs</li><li>Upload compatible audio files</li><li>Import spreadsheets with call references</li><li>Choose which recordings to process</li></ul></div><div class="compare-card"><h3>Review control</h3><ul class="micro-list"><li>AI proposes quality findings</li><li>Analyst can correct or dismiss flagged mistakes</li><li>Ratings use a 1–5 scale</li><li>Final feedback goes out only on submission</li></ul></div></div>
+</div></section>
+
+<section class="section" id="review"><div class="wrap">
+  <p class="eyebrow">07 / Review workspace</p><h2>AI suggests.<br>People decide.</h2>
+  <p class="intro">The workspace combines recording playback, structured checklist ratings, and mistake review in one place. The analyst remains accountable for the final evaluation.</p>
+  <div class="mock-panel review-grid" aria-label="Illustrative call review workspace">
+    <div class="ui-main"><div class="ui-top"><h4>Review / Call 01</h4><span class="ui-pill">Awaiting analyst validation</span></div><p class="smallp">Recordings remain available for playback without download controls.</p><div class="vm-wave" aria-hidden="true"><i style="height:28%"></i><i style="height:72%"></i><i style="height:40%"></i><i style="height:92%"></i><i style="height:22%"></i><i style="height:77%"></i><i style="height:54%"></i><i style="height:33%"></i><i style="height:60%"></i><i style="height:97%"></i><i style="height:28%"></i><i style="height:64%"></i><i style="height:41%"></i><i style="height:80%"></i><i style="height:47%"></i><i style="height:34%"></i><i style="height:86%"></i><i style="height:51%"></i><i style="height:70%"></i><i style="height:21%"></i></div><div class="vm-timeline"></div><span class="vm-micro">▶ &nbsp; Play / pause</span><span class="vm-micro">Optional English transcript</span><h4 style="font-size:16px;margin:22px 0 2px">Potential findings</h4><div class="stamp"><div><b>Project information needs verification</b><small>Time-linked suggestion · analyst checks approved source</small></div><span class="vm-btn ghost">Not a mistake</span></div><div class="stamp"><div><b>Customer requirement may need follow-up</b><small>Editable draft finding · analyst confirms before sharing</small></div><span class="vm-btn ghost">Edit</span></div></div>
+    <div class="ui-main"><div class="ui-top"><h4>Quality checklist</h4><span class="ui-pill">1–5 scale</span></div><p class="smallp">Proposed criteria for validation with the team—not the verified official checklist.</p><div class="vm-quality"><span>Communication quality</span><b>1–5</b></div><div class="vm-quality"><span>Customer needs</span><b>1–5</b></div><div class="vm-quality"><span>Project information accuracy</span><b>1–5</b></div><div class="vm-quality"><span>Recommendations</span><b>1–5</b></div><div class="vm-quality"><span>Customer handling</span><b>1–5</b></div><div class="fakeinput" style="margin-top:18px"><strong>Short explanation</strong>What worked well? What needs attention?</div><div style="margin-top:20px"><span class="vm-btn">Submit finalized review</span></div></div>
+  </div>
+  <p class="disclaimer">This is a conceptual visual. The labels suggest layout and behavior, not an interactive working prototype.</p>
+  <div class="three" style="margin-top:22px"><div class="box"><h3>Multilingual by design</h3><p>Proposed AI analysis across Tamil, Hindi, Malayalam, Telugu, Kannada, and English.</p></div><div class="box"><h3>English when requested</h3><p>The reviewer can request an English transcript, rather than requiring a transcript for every call.</p></div><div class="box"><h3>Evidence before action</h3><p>Analysts validate flagged pricing or project claims against approved information before submitting feedback.</p></div></div>
+</div></section>
+
+<section class="section alt" id="presales"><div class="wrap">
+  <p class="eyebrow">08 / Feedback and follow-through</p><h2>From a submitted review<br>to a visible next step.</h2>
+  <div class="split"><div><p class="intro">After an analyst submits a final review, the pre-sales executive receives a notification showing that particular call's rating—not their average across all calls.</p><p>Opening the notification reveals detailed findings, an explanation, and a required comment. The executive can acknowledge reading it or request a re-review. Disputed items return to the same analyst.</p><p>The executive can view only their own call records and feedback. A manager can see the team-wide review history.</p></div>
+  <div><div class="panel"><span class="badge">ILLUSTRATIVE FEEDBACK CARD</span><h3>Call review ready</h3><p>Your finalized call review is available.</p><div class="ui-top" style="margin-top:17px"><span class="inline-status">Call-specific rating</span><strong style="color:#5643b8">1–5</strong></div><div class="fakeinput" style="margin-top:17px"><strong>My response</strong>Comment on the feedback before acknowledgement.</div><div class="flow" style="margin-bottom:0"><span class="vm-btn">I have read this</span><span class="vm-btn ghost">Request review</span></div><p class="note" style="margin-top:14px">Concept only · Not a functional form</p></div></div></div>
+  <div class="diagram"><div class="flow"><span class="step">Analyst submits</span><span class="arr">→</span><span class="step">Executive notified</span><span class="arr">→</span><span class="step">Reviews and comments</span><span class="arr">→</span><span class="step">Acknowledges or disputes</span><span class="arr">→</span><span class="step">Analyst resolves dispute</span></div></div>
+</div></section>
+
+<section class="section" id="decisions"><div class="wrap">
+  <p class="eyebrow">09 / Key product decisions</p><h2>Designing for trust<br>and accountability.</h2>
+  <div class="split"><div><p class="intro">In an AI-assisted workflow, speed alone isn't enough. The system must make it clear who checks an output, who receives feedback, and how changes are handled.</p><p class="bold-note">Design principle: AI supports the review; it does not replace reviewer judgment.</p></div>
+  <div class="compact">
+    <div class="numbered"><span class="num">01</span><div><h3>Analyst-controlled approval</h3><p>AI suggestions and ratings can be corrected, edited, or marked “Not a mistake.”</p></div></div>
+    <div class="numbered"><span class="num">02</span><div><h3>Clear notification timing</h3><p>Pre-sales is notified on final review submission—not when a recording is uploaded.</p></div></div>
+    <div class="numbered"><span class="num">03</span><div><h3>Traceable changes</h3><p>The proposed manager view exposes the original AI score, final score, changes, and acknowledgement history.</p></div></div>
+    <div class="numbered"><span class="num">04</span><div><h3>Protected project knowledge</h3><p>Project data may be retrieved from approved sources, but only administrators edit the knowledge base; reviewers verify questionable claims.</p></div></div>
+    <div class="numbered"><span class="num">05</span><div><h3>Useful reporting</h3><p>Dashboard summaries and daily, weekly, and monthly report emails, with an option to disable email notifications.</p></div></div>
+  </div></div>
+</div></section>
+
+<section class="section tech" id="collaboration"><div class="wrap">
+  <p class="eyebrow">10 / Stakeholder alignment</p><h2>Feedback shaped<br>the proposed flow.</h2>
+  <p class="intro" style="color:#cbd0e4">I discussed the experience with quality checkers, pre-sales teams, project managers, and the pre-sales head. They responded positively to the simpler review and notification workflow.</p>
+  <div class="three"><div class="box"><h3>Less manual follow-up</h3><p>Stakeholders valued the possibility of feedback being automatically shared after submission.</p></div><div class="box"><h3>Clearer mistakes</h3><p>They wanted employees to understand what was wrong without searching through scattered paper notes.</p></div><div class="box"><h3>Greater visibility</h3><p>They saw value in knowing whether feedback had been acknowledged and checking subsequent call performance.</p></div></div>
+  <p style="margin-top:32px;font-size:13px">These are qualitative reactions to a design proposal. They are not measured usability-test results, production outcomes, or validated efficiency gains.</p>
+</div></section>
+
+<section class="section" id="outcomes"><div class="wrap">
+  <p class="eyebrow">11 / Intended value & reflection</p><h2>What success would look like.</h2>
+  <p class="intro">Voice Sumadhura is still in design. The next step is to evaluate whether this approach makes review work faster and feedback easier to act on.</p>
+  <div class="three"><div class="outcome"><h3>Quicker quality reviews</h3><p>Track review time and calls reviewed per analyst before and after implementation.</p></div><div class="outcome"><h3>Clearer follow-through</h3><p>Track acknowledgement rates, review disputes, and the time between review submission and employee response.</p></div><div class="outcome"><h3>Better coaching signals</h3><p>Explore recurring mistake patterns and rating trends across repeated call reviews.</p></div></div>
+  <p class="callout">My biggest learning: workflow design is not just about automating tasks; it's about connecting people, decisions, and the information that helps them act.</p>
+  <p class="note">No production adoption, time-savings percentages, satisfaction improvements, or booking gains are claimed. These would need testing and real data after implementation.</p>
+  <div class="privacy" style="margin-top:35px"><strong>Confidentiality & representation note:</strong> This public portfolio case study contains original writing and conceptual illustrations. It does not reproduce company Figma screens, customer recordings, private sales data, or proprietary internal documents. Review employer confidentiality policies before publication.</div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap"><div><h2>Better workflows.<br>More useful feedback.</h2><p>Voice Sumadhura · Product design case study · Design stage</p></div><a href="#top">Back to top ↑</a></div></footer>
+
+<script>
+(() => {
+  const cards = [...document.querySelectorAll('#overview .split>.stack>.box')];
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let animationFrame = 0;
+
+  cards.forEach((card, index) => {
+    card.style.setProperty('--overview-offset', `${index * 14}px`);
+    card.style.setProperty('--overview-layer', String(index + 1));
+  });
+
+  if (reducedMotion.matches) {
+    cards.forEach(card => card.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => revealObserver.observe(card));
+  }
+
+  function updateOverviewCards() {
+    animationFrame = 0;
+    const start = window.innerHeight * 0.82;
+
+    cards.forEach((card, index) => {
+      if (reducedMotion.matches || index === cards.length - 1) {
+        card.style.setProperty('--overview-scale', '1');
+        card.style.setProperty('--overview-lift', '0px');
+        return;
+      }
+
+      const nextCard = cards[index + 1];
+      const target = parseFloat(getComputedStyle(nextCard).top);
+      const nextTop = nextCard.getBoundingClientRect().top;
+      const progress = Math.max(0, Math.min(1, (start - nextTop) / (start - target)));
+
+      card.style.setProperty('--overview-scale', (1 - progress * 0.045).toFixed(3));
+      card.style.setProperty('--overview-lift', `${(-progress * 10).toFixed(1)}px`);
+    });
+  }
+
+  function scheduleOverviewCards() {
+    if (animationFrame) return;
+    animationFrame = requestAnimationFrame(updateOverviewCards);
+  }
+
+  addEventListener('scroll', scheduleOverviewCards, { passive: true });
+  addEventListener('resize', scheduleOverviewCards);
+  reducedMotion.addEventListener('change', scheduleOverviewCards);
+  scheduleOverviewCards();
+})();
+</script>
+</body></html>
